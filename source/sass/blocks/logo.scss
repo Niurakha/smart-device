@@ -1,0 +1,47 @@
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 199px;
+  margin-right: auto;
+
+  cursor: default;
+
+  @media (max-width: $tablet-width) {
+    width: 201px;
+    padding-top: 12px;
+  }
+}
+
+.logo__svg {
+  @media (max-width: $mobile-width) {
+    width: 42px;
+    height: 38px;
+  }
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 45px;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.logo__big-text {
+  font-family: $font-family-secondary;
+  color: $color-primary-light;
+
+  @include font (25px, 700, 29px);
+}
+
+.logo__small-text {
+  font-family: $font-family-tertiary;
+  color: $color-logo-subtitle;
+
+  @include font (12px, 500, 14px);
+}

@@ -1,0 +1,150 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 660px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (max-width: $tablet-width) {
+    min-width: 84px;
+    padding-top: 7px;
+  }
+}
+
+.contacts__email {
+  margin-right: 88px;
+
+  @media (max-width: $tablet-width) {
+    width: 26px;
+    height: 19px;
+    margin-right: 32px;
+  }
+}
+
+.contacts__tel {
+  margin-right: 50px;
+
+  @media (max-width: $tablet-width) {
+    width: 26px;
+    height: 24px;
+    margin-right: 0;
+  }
+}
+
+.contacts__email-link,
+.contacts__tel-link {
+  color: $color-primary-light;
+
+  transition: all 0.3s ease;
+
+  @include font(16px, 400, 18px);
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.contacts__email-link {
+  position: relative;
+
+  min-width: 135px;
+  padding-left: 38px;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 2px;
+    left: -1px;
+
+    width: 19px;
+    height: 14px;
+
+    background-image: url("../img/icon-envelope.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 1px;
+    padding-left: 27px;
+
+    &::before {
+      top: 1px;
+      left: 1px;
+
+      width: 26px;
+      height: 19px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &::before {
+      left: 11px;
+    }
+  }
+}
+
+.contacts__tel-link {
+  position: relative;
+
+  min-width: 218px;
+  padding-left: 34px;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 6px;
+    padding-left: 26px;
+
+    &::before {
+      top: 0;
+      left: 2px;
+
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.contacts__email-text,
+.contacts__tel-text,
+.contacts__btn {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.contacts__btn {
+  min-width: 180px;
+  padding: 13px 0 12px;
+
+  text-align: center;
+
+  border: 1px solid $color-primary-light;
+
+  transition: all 0.3s ease;
+
+  @include font(14px, 700, 16px);
+
+  &:hover,
+  &:focus {
+    color: $color-primary-dark;
+
+    background-color: $color-primary-light;
+  }
+}

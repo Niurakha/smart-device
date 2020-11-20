@@ -1,0 +1,30 @@
+.btn {
+  display: block;
+
+  font-family: $font-family-secondary;
+  text-align: center;
+  color: $color-primary-light;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  // &:hover,
+  // &:focus {
+  //   color: $color-primary-light;
+
+  //   background-color: $color-primary-dark;
+  //   // box-shadow: inset 1px 1px $color-primary-light, inset -1px -1px $color-primary-light;
+  // }
+
+  // @media (max-width: $tablet-width) {
+  //   padding: 10px 60px 9px;
+  // }
+
+  // @media (max-width: $mobile-width) {
+  //   padding: 10px 52px 9px;
+  // }
+}

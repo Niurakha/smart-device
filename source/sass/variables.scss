@@ -1,0 +1,31 @@
+//color
+$color-primary-light: rgb(255, 255, 255); //#ffffff
+$color-primary-dark: rgb(102, 102, 102); //#666666
+$color-secondary-light: rgb(0, 178, 255); //#00b2ff
+$color-logo-subtitle: rgb(120, 136, 145); // #788891
+
+$color-header-bg: rgb(27, 45, 55); //#1b2d37
+$color-service-bg: rgb(27, 45, 55); //#1b2d37
+$color-booking-bg: rgb(183, 218, 250); //#b7dafa
+
+// #353735
+// rgb(32, 60, 66); //#203c42
+// #ebebeb
+// #f2f2f2
+// #cdcdcd
+// #788891
+// #fafafa
+
+//font
+$font-family-primary: "PT Mono", "Courier New", monospace;
+$font-family-secondary: "Roboto Condensed", "Arial", sans-serif;
+$font-family-tertiary: "Roboto", "Arial", sans-serif;
+
+//size
+$desktop-container-width: 1471px;
+$mobile-width-only: 320px;
+$mobile-width: 767px;
+$tablet-width: 1023px;
+$desktop-width: 1024px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

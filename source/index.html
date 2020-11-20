@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Device</title>
+  <meta name="description" content="Производство и монтаж, поставка комплектующих, блоков и модулей">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+
+  </script>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/PTMono-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Roboto-Medium.woff" as="font" type="font/woff" crossorigin>
+</head>
+
+<body>
+  <div style="display: none;">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+  <header class="header">
+    <div class="header__top header-top container">
+      <a class="header-top__logo-link logo">
+        <svg class="logo__svg" width="52" height="52" aria-label="Логотип сайта Печатные платы">
+          <use xlink:href="#icon-logo"></use>
+        </svg>
+        <div class="logo__text">
+          <span class="logo__big-text">Smart Device</span>
+          <span class="logo__small-text">умные технологии</span>
+        </div>
+      </a>
+      <ul class="header-top__contacts contacts">
+        <li class="contacts__email">
+          <a class="contacts__email-link" href="mailto:info@sd.ru" aria-label="Наша электронная почта">
+            <span class="contacts__email-text">info@sd.ru</span>
+          </a>
+        </li>
+        <li class="contacts__tel">
+          <a class="contacts__tel-link" href="tel:+74950005252" aria-label="Наш телефон">
+            <span class="contacts__tel-text">+7 (495) 000 52 52</span>
+          </a>
+        </li>
+        <li class="contacts__button">
+          <a class="contacts__btn btn" href="#">Заказать звонок</a>
+        </li>
+      </ul>
+    </div>
+    <div class="header__intro intro">
+      <div class="intro__wrapper">
+        <h1>Печатные платы</h1>
+        <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a class="intro__link btn" href="#form">
+          <span class="intro__link--mobile">Бесплатная консультация</span>
+          <span class="intro__link--desktop">Получить бесплатную консультацию</span>
+        </a>
+        <a class="intro__scroll" href="#advanteges">Скролл вниз</a>
+      </div>
+      <div class="intro__image">
+        <picture>
+          <!-- 1х: 294px; 2x: 588px -->
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/printed-circuit-board-mobile@1x.webp 1x, img/printed-circuit-board-mobile@2x.webp 2x">
+          <!-- 1х: 260px; 2x: 520px -->
+          <source type="image/webp" media="(max-width: 1023px)"
+            srcset="img/printed-circuit-board-tablet@1x.webp 1x, img/printed-circuit-board-tablet@2x.webp 2x">
+          <!-- 1х: 705px; 2x: 1410px -->
+          <source type="image/webp"
+            srcset="img/printed-circuit-board-desktop@1x.webp 1x, img/printed-circuit-board-desktop@2x.webp 2x">
+
+          <!-- 1х: 705px; 2x: 1410px -->
+          <img src="img/printed-circuit-board-desktop@1x.png" srcset="img/printed-circuit-board-desktop@2x.png 2x"
+            width="705" height="515" alt="Печатные платы">
+        </picture>
+      </div>
+    </div>
+  </header>
+
+</body>
+
+</html>
