@@ -1,0 +1,32 @@
+.feedback {
+  position: relative;
+
+  min-height: 670px;
+  padding-top: 91px;
+
+  background-color: $color-secondary-light;
+  background-image: url("../img/paper-airplane-desktop@1x.png"), url("../img/triangle.svg"), url("../img/triangle-2.svg");
+  background-repeat: no-repeat;
+  // background-position: 350px 161px, 175px -60px, 100% 35px;
+  // background-size: 26.6% 43%, 35%, 19%;
+  background-position: 24.8% 42%, 14% -60px, 100% 35px;
+  background-size: 511px 289px, 671px, 364px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/paper-airplane-desktop@2x.png"), url("../img/triangle.svg"), url("../img/triangle-2.svg");
+  }
+
+  @media (max-width: 1500px) {
+    background-image: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 664px;
+    padding-top: 80px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 640px;
+    padding-top: 30px;
+  }
+}

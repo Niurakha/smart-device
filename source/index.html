@@ -214,6 +214,45 @@
         </div>
       </div>
     </section>
+    <section class="feedback" id="form">
+      <h2 class="visually-hidden">Форма для вопросов клиента</h2>
+      <div class="feedback__wrapper container">
+        <form class="feedback__form form" action="#" method="POST">
+          <h3>Остались вопросы? Задайте их нам!</h3>
+          <p>Мы проконсультируем Вас бесплатно</p>
+          <ul>
+            <li class="form__field-name">
+              <label for="name" aria-label="Имя">
+                <input type="text" name="name" id="name" value="" placeholder="Имя" required title="Введите своё имя">
+              </label>
+            </li>
+            <li class="form__field-phone">
+              <label for="tel" aria-label="Номер телефона">
+                <input type="tel" name="tel" id="tel" value="" placeholder="Телефон" required
+                  pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" minlength="16"
+                  title="Введите номер телефона">
+              </label>
+            </li>
+            <li class="form__field-textarea">
+              <label for="letter" aria-label="Текст письма">
+                <textarea name="letter" id="letter" placeholder="Ваш вопрос" title="Задайте нам вопрос"
+                  required></textarea>
+              </label>
+            </li>
+            <li class="form__field-checkbox">
+              <input class="visually-hidden" type="checkbox" name="checkbox" id="checkbox" required checked>
+              <label for="checkbox" aria-label="Согласие на обработку персональных данных">
+                Я согласен на обработку персональных данных
+              </label>
+            </li>
+            <li class="form__field-button">
+              <button class="form__btn btn" type="submit">Задать вопрос</button>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

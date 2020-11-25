@@ -1,0 +1,322 @@
+.feedback__wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 151px;
+
+  @media (max-width: 1500px) {
+    max-width: 647px;
+    min-height: 490px;
+    padding-right: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 15px;
+  }
+}
+
+.form h3 {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-family: $font-family-secondary;
+  color: $color-primary-light;
+
+  @include font(36px, 400, 51px);
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 16px;
+
+    @include font(32px, 400, 45px);
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 13px;
+
+    @include font(28px, 400, 39px);
+  }
+}
+
+.form p {
+  margin: 0 0 52px;
+
+  color: $color-primary-light;
+
+  @include font(16px, 400, 22px);
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 54px;
+    margin-left: 5px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 26px;
+    margin-left: 0;
+  }
+}
+
+.form ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  width: 570px;
+  height: 332px;
+  min-height: 332px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (max-width: $tablet-width) {
+    width: 595px;
+    padding-left: 4px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+.form li {
+  align-self: center;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+
+.form__field-name,
+.form__field-phone {
+  width: 270px * 100% / 570px;
+  height: 50px;
+  margin-bottom: 40px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 43px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.form__field-name {
+  @media (max-width: $tablet-width) {
+    width: 280px * 100% / 591px;
+  }
+}
+
+.form__field-phone {
+  @media (max-width: $tablet-width) {
+    width: 279px * 100% / 591px;
+  }
+}
+
+.form__field-textarea {
+  width: 100%;
+  min-height: 156px;
+  margin-bottom: 40px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 104px;
+    margin-bottom: 26px;
+  }
+}
+
+.form__field-checkbox {
+  order: 1;
+  width: 270px * 100% / 570px;
+  padding-top: 7px;
+  padding-left: 41px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 5px;
+    padding-left: 43px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 34px;
+  }
+}
+
+.form__field-button {
+  width: 270px * 100% / 570px;
+
+  @media (max-width: $tablet-width) {
+    width: 280px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.form__field-name input,
+.form__field-phone input {
+  min-width: 270px;
+  padding: 12px 17px 15px;
+
+  border: none;
+  border-radius: 0;
+
+  @media (max-width: $tablet-width) {
+    min-width: 280px;
+    padding-bottom: 17px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.form input,
+.form textarea {
+  color: $color-primary-light;
+
+  background-color: $color-secondary-lighter;
+  border: 0;
+
+  transition: all 0.3s ease;
+
+  @include font(16px, 400, 22px);
+
+  &::placeholder {
+    color: $color-primary-light;
+
+    @include font(16px, 400, 22px);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-secondary-lightest;
+  }
+}
+
+.form textarea {
+  width: 100%;
+  min-height: 152px;
+  padding: 12px 17px;
+
+  resize: none;
+
+  @media (max-width: $tablet-width) {
+    min-height: 160px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 104px;
+  }
+}
+
+
+.form__field-checkbox input:checked + label::after {
+  display: block;
+}
+
+.form__field-checkbox label {
+  position: relative;
+
+  display: inline-block;
+
+  vertical-align: middle;
+  text-align: left;
+  color: $color-primary-light-80;
+
+  cursor: pointer;
+
+  @include font (14px, 400, 16px);
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: -1px;
+    left: -33px;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: $color-secondary-light;
+    border: 1px solid $color-primary-light;
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 3px;
+    left: -28px;
+
+    display: none;
+    width: 7px;
+    height: 5px;
+
+    border: 1px solid $color-primary-light;
+    border-top-style: none;
+    border-right-style: none;
+    transform: rotate(-45deg);
+  }
+
+
+  @media (max-width: $tablet-width) {
+    &::before {
+      top: 0;
+      left: -36px;
+
+      width: 17px;
+      height: 16px;
+    }
+
+    &::after {
+      top: 3px;
+      left: -31px;
+
+      height: 6px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &::before {
+      top: 1px;
+      left: -34px;
+    }
+
+    &::after {
+      top: 4px;
+      left: -29px;
+    }
+  }
+}
+
+.form__btn {
+  width: 100%;
+  padding: 15px 15px 14px;
+
+  background-color: $color-secondary-light;
+  border: 1px solid $color-primary-light;
+
+  transition: all 0.3s ease;
+
+  @include font(14px, 400, 16px);
+
+  &:hover,
+  &:focus {
+    color: $color-secondary-light;
+
+    background-color: $color-primary-light;
+    border: 1px solid $color-secondary-light;
+  }
+
+  // @media (max-width: $tablet-width) {
+  //   // height: 47px;
+  // }
+
+  @media (max-width: $mobile-width) {
+    padding: 15px 15px 14px;
+  }
+}
