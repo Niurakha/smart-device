@@ -1,0 +1,141 @@
+.about {
+  padding-top: 75px;
+  padding-bottom: 100px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 27px;
+    padding-bottom: 79px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 37px;
+    padding-bottom: 65px;
+  }
+}
+
+.about__wrapper {
+  min-height: 317px;
+  padding-right: 125px;
+  padding-left: 301px;
+
+  background-image: url("../img/year-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: 90px 5px;
+  background-size: 220px 317px;
+
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/year-desktop@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 355px;
+    padding-right: 0;
+    padding-left: 188px;
+
+    background-image: url("../img/year-tablet@1x.png");
+    background-position: -25px -3px;
+    background-size: 243px 362px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/year-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+
+    background-image: none;
+  }
+}
+
+.about h2 {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-family: $font-family-secondary;
+
+  @include font(36px, 400, 51px);
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 24px;
+    margin-left: -3px;
+
+    @include font(32px, 400, 45px);
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 21px;
+    margin-left: -1px;
+
+    @include font(28px, 400, 39px);
+  }
+}
+
+.about p {
+  margin: 0;
+
+  @include font(16px, 400, 22px);
+}
+
+.about p:nth-child(n) {
+  margin-bottom: 20px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.about p:last-of-type {
+  @media (max-width: $tablet-width) {
+    position: relative;
+
+    &::after {
+      content: "\002E \002E";
+      position: absolute;
+
+      width: 1px;
+      height: 1px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 28px;
+  }
+}
+
+.about span {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.about a {
+  width: 180px;
+  margin-top: 37px;
+  padding: 13.5px 10px;
+
+  color: $color-secondary-light;
+
+  border: 1px solid $color-secondary-light;
+
+  transition: all 0.3s ease;
+
+  @include font(14px, 500, 16px);
+
+  &:hover,
+  &:focus {
+    color: $color-primary-light;
+
+    background-color: $color-secondary-light;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 41px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 0;
+    margin-left: 2px;
+  }
+}

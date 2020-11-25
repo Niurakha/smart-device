@@ -1,0 +1,22 @@
+.page-main {
+  min-height: 1263px;
+
+  background-image: url("../img/bg-advantages-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0 -29px;
+  background-size: 1920px 1347px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 1113px;
+
+    background-image: url("../img/bg-advantages-tablet.svg");
+    background-position: 100% 90px;
+    background-size: 559px 873px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 1796px;
+
+    background-position: 50% 652px;
+  }
+}
