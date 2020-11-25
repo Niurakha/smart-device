@@ -1,0 +1,41 @@
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  @media (max-width: 1500px) {
+    width: 110px * 100% / 720px;
+  }
+
+  @media (max-width: $mobile-width) {
+    justify-content: center;
+    width: 112px * 100% / 271px;
+  }
+}
+
+.social-list li {
+  display: flex;
+  margin-right: 14px;
+
+  @media (max-width: $tablet-width) {
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.social-list a {
+  transition: all 0.3s ease;
+
+  fill: $color-icon;
+
+  &:hover,
+  &:focus {
+    fill: $color-secondary-light;
+  }
+}
