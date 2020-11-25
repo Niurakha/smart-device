@@ -3,14 +3,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 199px;
-  margin-right: auto;
 
   cursor: default;
 
   @media (max-width: $tablet-width) {
-    width: 201px;
-    padding-top: 12px;
+    width: 100%;
   }
 }
 
@@ -25,21 +22,19 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 45px;
+  height: 50px;
 
-  @media (max-width: $mobile-width) {
-    display: none;
-  }
+  text-align: left;
 }
 
-.logo__big-text {
+.logo__text-big {
   font-family: $font-family-secondary;
   color: $color-primary-light;
 
   @include font (25px, 700, 29px);
 }
 
-.logo__small-text {
+.logo__text-small {
   font-family: $font-family-tertiary;
   color: $color-logo-subtitle;
 

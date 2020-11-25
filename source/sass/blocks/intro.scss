@@ -116,7 +116,6 @@
 
 .intro__link {
   width: 406px;
-  margin-bottom: 132px;
   margin-left: 99px;
   padding: 17px 28px 17px;
 
@@ -126,10 +125,6 @@
   transition: all 0.3s ease;
 
   @include font(16px, 700, 19px);
-
-  &--mobile {
-    display: none;
-  }
 
   &:hover,
   &:focus {
@@ -158,6 +153,23 @@
   }
 }
 
+.intro__btn-text {
+  &--mobile {
+    display: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    &--mobile {
+      display: inline;
+    }
+
+    &--desktop {
+      display: none;
+    }
+  }
+}
+
+
 .intro__scroll {
   position: absolute;
   bottom: 36px;
@@ -172,6 +184,11 @@
   opacity: 0.5;
 
   @include font(14px, 400, 16px);
+
+  &:hover,
+  &:focus {
+    color: $color-secondary-light;
+  }
 
   @media (max-width: $tablet-width) {
     display: none;
