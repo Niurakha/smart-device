@@ -1,20 +1,20 @@
 //color
 $color-primary-light: rgb(255, 255, 255); //#ffffff
+$color-primary-light-10: rgba(255, 255, 255, 0.1); //#ffffff-10
+$color-primary-light-30: rgba(255, 255, 255, 0.3); //#ffffff-30
+$color-primary-light-80: rgba(255, 255, 255, 0.8); //#ffffff-80
 $color-primary-dark: rgb(102, 102, 102); //#666666
 $color-secondary-light: rgb(0, 178, 255); //#00b2ff
+$color-secondary-lighter:  rgb(25, 186, 255); //#19baff
+$color-secondary-lightest:  rgb(55, 195, 255); // #37c3ff
+$color-dark-gray: rgb(27, 45, 55); //#1b2d37
+$color-dark-gray-50:rgba(27, 45, 55, 0.5); //#1b2d37-50
+
 $color-logo-subtitle: rgb(120, 136, 145); // #788891
-
-$color-header-bg: rgb(27, 45, 55); //#1b2d37
-$color-service-bg: rgb(27, 45, 55); //#1b2d37
-$color-booking-bg: rgb(183, 218, 250); //#b7dafa
-
-// #353735
-// rgb(32, 60, 66); //#203c42
-// #ebebeb
-// #f2f2f2
-// #cdcdcd
-// #788891
-// #fafafa
+$color-logo-footer-subtitle: rgb(32, 60, 66); //#203c42
+$color-border: rgb(235, 235, 235); // #ebebeb
+$color-icon: rgb(205, 205, 205); // #cdcdcd
+$color-border-copyright-20: rgba(53, 55, 53, 0.2); // #353735
 
 //font
 $font-family-primary: "PT Mono", "Courier New", monospace;

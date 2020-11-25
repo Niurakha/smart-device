@@ -57,8 +57,7 @@ gulp.task('images', function () {
       .src('build/img/**/*.{png,jpg,svg}')
       .pipe(
           imagemin([
-            imagemin.optipng({optimizationLevel: 5}),
-            pngquant({quality: [0.65, 0.7], speed: 5}),
+            pngquant({quality: [0.65, 0.7], speed: 8}),
             imagemin.jpegtran({progressive: true}),
             imageminJpegRecompress({
               loops: 4,
@@ -83,7 +82,7 @@ gulp.task('webp', function () {
 
 gulp.task('sprite', function () {
   return gulp
-      .src('source/img/icon-*.svg')
+      .src('source/img/*.svg')
       .pipe(svgstore({inlineSvg: true}))
       .pipe(rename('sprite_auto.svg'))
       .pipe(gulp.dest('build/img'));
