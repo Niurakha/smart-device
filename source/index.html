@@ -359,6 +359,49 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal">
+    <div class="modal__wrapper container">
+      <h2 class="visually-hidden">Форма для вопросов клиента</h2>
+      <button class="modal__close-button" type="button" aria-label="Закрыть форму" tabindex="1"></button>
+      <form class="modal__form form" action="#" method="POST">
+        <h3>Закажите звонок</h3>
+        <p>Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
+        <ul>
+          <li class="modal__form-name form__field-name">
+            <label for="username" aria-label="Имя">
+              <input type="text" name="username" id="username" value="" placeholder="Имя" required
+                title="Введите своё имя" tabindex="1">
+            </label>
+          </li>
+          <li class="modal__form-phone form__field-phone">
+            <label for="user_phone" aria-label="Номер телефона">
+              <input type="tel" name="phone" id="user_phone" value="" placeholder="Телефон" required
+                pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" minlength="16"
+                title="Введите номер телефона" tabindex="1">
+            </label>
+          </li>
+          <li class="modal__form-textarea form__field-textarea">
+            <label for="user_letter" aria-label="Текст письма">
+              <textarea name="user_letter" id="user_letter" placeholder="Ваш вопрос" title="Задайте нам вопрос" required
+                tabindex="1"></textarea>
+            </label>
+          </li>
+          <li class="modal__form-checkbox form__field-checkbox">
+            <input class="visually-hidden" type="checkbox" name="checkbox" id="modal_checkbox" required checked
+              tabindex="1">
+            <label for="modal_checkbox" aria-label="Согласие на обработку персональных данных">
+              Я согласен на обработку персональных данных
+            </label>
+          </li>
+          <li class="modal__form-button form__field-button">
+            <button class="form__btn btn" type="submit" tabindex="2">Отправить</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </section>
+  <script src="js/vendor.js" async></script>
   <script src="js/main.js"></script>
 </body>
 

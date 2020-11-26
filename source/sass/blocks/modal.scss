@@ -1,0 +1,149 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  background-color: $color-dark-50;
+}
+
+.modal__wrapper {
+  position: relative;
+
+  width: 490px;
+  padding: 30px 40px 43px;
+
+  background-color: $color-secondary-light;
+}
+
+.modal__form h3 {
+  margin: 0;
+  margin-bottom: 11px;
+
+  font-family: $font-family-secondary;
+  color: $color-primary-light;
+
+  @include font(28px, 400, 39px);
+}
+
+.modal__form p {
+  margin-bottom: 35px;
+}
+
+.modal__form ul {
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__form li {
+  width: 100%;
+  margin-bottom: 30.5px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 11px 26px 17px;
+}
+
+.modal__form-textarea,
+.modal__form textarea {
+  min-height: 104px;
+}
+
+.modal__form-checkbox {
+  padding-right: 10px;
+  padding-left: 48px;
+}
+
+.modal__form-checkbox input {
+  &:checked {
+    + label {
+      &::after {
+        top: 6px;
+        left: -43px;
+      }
+    }
+  }
+}
+
+.modal__form-checkbox label {
+  &::before {
+    top: 2px;
+    left: -48px;
+  }
+
+  // &::after {
+  //   top: 6px;
+  //   left: -43px;
+  // }
+}
+
+.modal__form-button {
+  margin-bottom: 25px;
+}
+
+.modal__form-button button {
+  padding-bottom: 15px;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 24px;
+
+    width: 1px;
+    height: 23px;
+
+    background-color: $color-primary-light;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
+.modal--show {
+  display: flex;
+
+  animation: fade-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

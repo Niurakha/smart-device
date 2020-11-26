@@ -27,6 +27,11 @@ a {
   text-decoration: none;
 }
 
+.disable-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute;
 
