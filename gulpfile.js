@@ -57,7 +57,7 @@ gulp.task('images', function () {
       .src('build/img/**/*.{png,jpg,svg}')
       .pipe(
           imagemin([
-            pngquant({quality: [0.65, 0.7], speed: 8}),
+            pngquant({quality: [0.6, 0.65], speed: 7}),
             imagemin.jpegtran({progressive: true}),
             imageminJpegRecompress({
               loops: 4,

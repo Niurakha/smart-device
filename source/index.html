@@ -11,7 +11,6 @@
     document.createElement("picture");
 
   </script>
-  <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -20,12 +19,14 @@
   <link rel="preload" href="fonts/RobotoCondensed-Bold.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/PTMono-Regular.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/Roboto-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <div style="display: none;">
-    <include src="build/img/sprite_auto.svg"></include>
+    <include src="build/img/sprite_auto.svg" rel="preload"></include>
   </div>
+
   <header class="header">
     <div class="header__top header-top container">
       <a class="header-top__logo-link logo">
@@ -126,7 +127,7 @@
         </ul>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="adout">
       <div class="container">
         <div class="about__wrapper">
           <h2>О компании</h2>
@@ -141,17 +142,17 @@
               Производители светотехники России.
             </span>
           </p>
-          <a class="btn" href="#" aria-label="Подробнее о нашей компании">Подробнее</a>
+          <a class="btn" href="/more" aria-label="Подробнее о нашей компании">Подробнее</a>
         </div>
       </div>
     </section>
-    <section class="goods-services">
+    <section class="goods-services" id="product">
       <div class="container">
         <div class="goods-services__wrapper">
           <h2>Service Device предлагает следующие товары и&nbsp;услуги</h2>
           <ul>
             <li>
-              <a href="#">
+              <a href="/production">
                 <h3>Производство печатных&nbsp;плат</h3>
                 <picture>
                   <!-- 1х: 290px; 2x: 580px -->
@@ -172,7 +173,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/mounting">
                 <h3>Монтаж печатных плат</h3>
                 <picture>
                   <!-- 1х: 290px; 2x: 580px -->
@@ -191,7 +192,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/components">
                 <h3>Комплектующие для&nbsp;светотехники</h3>
                 <picture>
                   <!-- 1х: 290px; 2x: 580px -->
@@ -223,30 +224,32 @@
           <ul>
             <li class="form__field-name">
               <label for="name" aria-label="Имя">
-                <input type="text" name="name" id="name" value="" placeholder="Имя" required title="Введите своё имя">
+                <input type="text" name="name" id="name" value="" placeholder="Имя" required title="Введите своё имя"
+                  tabindex="1">
               </label>
             </li>
             <li class="form__field-phone">
               <label for="tel" aria-label="Номер телефона">
-                <input type="tel" name="tel" id="tel" value="" placeholder="Телефон" required
-                  pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" minlength="16"
-                  title="Введите номер телефона">
+                <input type="tel" name="phone" id="tel" value="" placeholder="Телефон" required minlength="16"
+                  title="Введите номер телефона" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$"
+                  tabindex="1">
               </label>
             </li>
             <li class="form__field-textarea">
               <label for="letter" aria-label="Текст письма">
-                <textarea name="letter" id="letter" placeholder="Ваш вопрос" title="Задайте нам вопрос"
-                  required></textarea>
+                <textarea name="letter" id="letter" placeholder="Ваш вопрос" title="Задайте нам вопрос" required
+                  tabindex="1"></textarea>
               </label>
             </li>
             <li class="form__field-checkbox">
-              <input class="visually-hidden" type="checkbox" name="checkbox" id="checkbox" required checked>
-              <label for="checkbox" aria-label="Согласие на обработку персональных данных">
+              <input class="visually-hidden" type="checkbox" name="checkbox" id="form__checkbox" required checked
+                tabindex="1">
+              <label for="form__checkbox" aria-label="Согласие на обработку персональных данных">
                 Я согласен на обработку персональных данных
               </label>
             </li>
             <li class="form__field-button">
-              <button class="form__btn btn" type="submit">Задать вопрос</button>
+              <button class="form__btn btn" type="submit" tabindex="2">Задать вопрос</button>
             </li>
           </ul>
         </form>
@@ -269,21 +272,21 @@
         <span class="social-block__item">1999-2018 SD Service Devices</span>
         <ul class="social-block__social-list social-list">
           <li>
-            <a href="#" aria-label="Мы на Facebook">
+            <a href="/fb" aria-label="Мы на Facebook">
               <svg width="27" height="27">
                 <use xlink:href="#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="#" aria-label="Мы в Одноклассники">
+            <a href="/ok" aria-label="Мы в Одноклассники">
               <svg width="27" height="26">
                 <use xlink:href="#icon-ok"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="#" aria-label="Мы в Вконтакте">
+            <a href="/vk" aria-label="Мы в Вконтакте">
               <svg width="27" height="26">
                 <use xlink:href="#icon-vkontakte"></use>
               </svg>
@@ -340,10 +343,10 @@
             <span>1999-2018 SD Service Devices</span>
           </li>
           <li class="copyright__item copyright__item--confidentiality">
-            <a href="#">Условия конфиденциальности</a>
+            <a href="/confidentiality">Условия конфиденциальности</a>
           </li>
           <li class="copyright__item copyright__item--developed">
-            <a href="#">Developed by wow studio</a>
+            <a href="/developed">Developed by wow studio</a>
           </li>
         </ul>
       </div>
