@@ -342,39 +342,29 @@
         </ul>
       </div>
       <div class="footer__info-menu info-menu">
-        <div class="info-menu__sitemap">
-          <h3 class="info-menu__title">Разделы сайта</h3>
-          <div>
-            <ul>
-              <li>
-                <a href="#">О компании</a>
-              </li>
-              <li>
-                <a href="#">Продукты</a>
-              </li>
-              <li>
-                <a href="#">Производство печатных плат</a>
-              </li>
-              <li>
-                <a href="#">Монтаж печатных плат</a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a href="#">Комплектующие</a>
-              </li>
-              <li>
-                <a href="#">Доставка</a>
-              </li>
-              <li>
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
+        <div class="info-menu__sitemap accordion">
+          <div class="info-menu__heading-block">
+            <h3 class="info-menu__title">Разделы сайта</h3>
+            <button class="info-menu__toggle accordion__toggle" type="button" aria-label="Показать/Спрятать
+          разделы сайта"></button>
           </div>
+          <ul class="info-menu__nav accordion__block">
+            <li> <a href="#about">О компании</a> </li>
+            <li> <a href="#product">Продукты</a> </li>
+            <li> <a href="/production">Производство печатных плат </a> </li>
+            <li> <a href="/mounting">Монтаж печатных плат</a> </li>
+            <li> <a href="/components">Комплектующие</a> </li>
+            <li> <a href="/delivery">Доставка</a> </li>
+            <li> <a href="/contacts">Контакты</a> </li>
+          </ul>
         </div>
-        <div class="info-menu__contacts info-menu">
-          <h3 class="info-menu__title">Наш офис</h3>
-          <ul>
+        <div class="info-menu__contacts accordion">
+          <div class="info-menu__heading-block">
+            <h3 class="info-menu__title">Наш офис</h3>
+            <button class="info-menu__toggle accordion__toggle" type="button" aria-label="Показать/Спрятать
+          контактную информацию"></button>
+          </div>
+          <ul class="info-menu__nav accordion__block">
             <li>
               <a href="https://yandex.ru/maps/-/CCUAvTRopD">г. Мытищи, Олимпийский проспект,&nbsp;д.10</a>
             </li>
