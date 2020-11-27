@@ -1,6 +1,5 @@
-'use strict';
-
 (function () {
+  'use strict';
 
   // аккордеон
   var accordionItems = document.querySelectorAll('.accordion');
@@ -38,7 +37,7 @@
 
   var anchors = document.querySelectorAll('a[href*="#"]');
 
-  anchors.forEach(function (anchor) {
+  Array.prototype.forEach.call(anchors, function (anchor) {
     anchor.addEventListener('click', function (evt) {
       evt.preventDefault();
 
@@ -46,7 +45,7 @@
 
       document.getElementById(blockID).scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
+        block: 'start'
       });
     });
   });
