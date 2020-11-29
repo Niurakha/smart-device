@@ -1,5 +1,6 @@
+'use strict';
+
 (function () {
-  'use strict';
 
   // аккордеон
   var accordionItems = document.querySelectorAll('.accordion');
@@ -35,7 +36,7 @@
 
   // скролл по якорной ссылке
 
-  var anchors = document.querySelectorAll('a[href*="#"]');
+  var anchors = document.querySelectorAll('a[href*=\'#\']');
 
   Array.prototype.forEach.call(anchors, function (anchor) {
     anchor.addEventListener('click', function (evt) {
@@ -65,7 +66,7 @@
     }
   }
 
-  var maskedInputs = document.querySelectorAll('input[name="phone"]');
+  var maskedInputs = document.querySelectorAll('input[name=\'phone\']');
 
   Array.prototype.forEach.call(maskedInputs, function (input) {
     input.addEventListener('input', mask, false);
