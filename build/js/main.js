@@ -18,9 +18,9 @@
       var accordionHeadingBlock = accordionBlock.closest('.accordion').querySelector('.accordion__heading-block');
       var button = accordionBlock.closest('.accordion').querySelector('.accordion__toggle');
       if (button === evt.target && !accordionHeadingBlock.classList.contains('accordion__heading-block--inactive') || button !== evt.target) {
-        hideBlock(accordionHeadingBlock, accordionBlock);
+        hideBlock(accordionHeadingBlock);
       } else if (button === evt.target) {
-        showBlock(accordionHeadingBlock, accordionBlock);
+        showBlock(accordionHeadingBlock);
       }
     });
   };
