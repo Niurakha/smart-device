@@ -198,9 +198,7 @@
   position: relative;
   z-index: 0;
 
-  flex-shrink: 1;
-
-  // min-width: 705px;
+  min-width: 705px;
 
   &::before {
     content: " ";
@@ -217,7 +215,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    // min-width: 260px;
+    min-width: 260px;
     flex-shrink: 0;
 
     &::before {
@@ -233,7 +231,7 @@
     position: absolute;
     top: 32px;
     right: 0;
-    flex-shrink: 5;
+    width: 294px;
 
     &::before {
       top: -137px;
@@ -247,17 +245,4 @@
 
 .intro__image img {
   width: 100%;
-
-  object-fit: cover;
-  // height: 515px;
-
-  @media (max-width: $tablet-width) {
-    // width: 260px;
-    // height: 340px;
-  }
-
-  @media (max-width: $mobile-width) {
-    // width: 294px;
-    // height: 220px;
-  }
 }

@@ -6,7 +6,7 @@
 
   @media (max-width: $tablet-width) {
     padding-top: 50px;
-    padding-bottom: 36px;
+    padding-bottom: 32px;
   }
 
   @media (max-width: $mobile-width) {
@@ -78,7 +78,7 @@
 
   @media (max-width: $tablet-width) {
     width: 100%;
-    margin-bottom: 44px;
+    margin-bottom: 46px;
 
     &:not(:last-child) {
       margin-right: 0;
@@ -168,8 +168,21 @@
   }
 }
 
+.goods-services li:last-of-type h3 {
+  @media (max-width: $tablet-width) {
+    top: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 30px;
+  }
+}
+
 .goods-services img {
   @media (max-width: $tablet-width) {
     width: 100%;
+    max-height: 256px;
+
+    object-fit: fill;
   }
 }

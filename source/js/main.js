@@ -4,33 +4,31 @@
 
   // аккордеон
   var accordionItems = document.querySelectorAll('.accordion');
-  var accordionBlocks = document.querySelectorAll('.accordion__block');
 
-  var hideBlock = function (button, block) {
-    button.classList.add('accordion__toggle--inactive');
-    block.classList.add('accordion__block--hidden');
+  var hideBlock = function (accordionHeadingBlock) {
+    accordionHeadingBlock.classList.add('accordion__heading-block--inactive');
   };
 
-  var showBlock = function (button, block) {
-    button.classList.remove('accordion__toggle--inactive');
-    block.classList.remove('accordion__block--hidden');
+  var showBlock = function (accordionHeadingBlock) {
+    accordionHeadingBlock.classList.remove('accordion__heading-block--inactive');
   };
 
   var toggleAccordion = function (evt) {
-    Array.prototype.forEach.call(accordionBlocks, function (accordionBlock) {
+    Array.prototype.forEach.call(accordionItems, function (accordionBlock) {
+      var accordionHeadingBlock = accordionBlock.closest('.accordion').querySelector('.accordion__heading-block');
       var button = accordionBlock.closest('.accordion').querySelector('.accordion__toggle');
-      if (button === evt.target && !button.classList.contains('accordion__toggle--inactive') || button !== evt.target) {
-        hideBlock(button, accordionBlock);
+      if (button === evt.target && !accordionHeadingBlock.classList.contains('accordion__heading-block--inactive') || button !== evt.target) {
+        hideBlock(accordionHeadingBlock, accordionBlock);
       } else if (button === evt.target) {
-        showBlock(button, accordionBlock);
+        showBlock(accordionHeadingBlock, accordionBlock);
       }
     });
   };
 
   Array.prototype.forEach.call(accordionItems, function (accordion) {
     var accordionToggleButton = accordion.querySelector('.accordion__toggle');
-    var accordionBlock = accordion.querySelector('.accordion__block');
-    hideBlock(accordionToggleButton, accordionBlock);
+    var accordionTitle = accordion.querySelector('.accordion__heading-block');
+    hideBlock(accordionTitle);
     accordionToggleButton.addEventListener('click', toggleAccordion);
   });
 
