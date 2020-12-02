@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-invalid-this */
 'use strict';
 
 (function () {
@@ -51,55 +53,46 @@
 
   // маска для номера телефона
 
-  function setCursorPosition(pos, elem) {
-    elem.focus();
-    if (elem.setSelectionRange) {
-      elem.setSelectionRange(pos, pos);
-    } else if (elem.createTextRange) {
-      var range = elem.createTextRange();
-      range.collapse(true);
-      range.moveEnd('character', pos);
-      range.moveStart('character', pos);
-      range.select();
+  var maskedInputs = document.querySelectorAll('[data-mask]');
+  function maskedInputsInit() {
+    for (var i = 0; i < maskedInputs.length; i++) {
+      maskedInputs[i].addEventListener('input', maskInput);
     }
   }
+  maskedInputsInit();
 
-  var maskedInputs = document.querySelectorAll('input[name=\'phone\']');
-
-  Array.prototype.forEach.call(maskedInputs, function (input) {
-    input.addEventListener('input', mask, false);
-    input.addEventListener('focus', mask, false);
-    input.addEventListener('blur', mask, false);
-
-    function mask(event) {
-      var matrix = '+7 (___) ___-__-__';
-      var i = 0;
-      var def = matrix.replace(/\D/g, '');
-      var val = input.value.replace(/\D/g, '');
-
-      if (def.length >= val.length) {
-        val = def;
-      }
-
-      input.value = matrix.replace(/./g, function (a) {
-        if (/[_\d]/.test(a) && i < val.length) {
-          return val.charAt(i++);
-        } else if (i >= val.length) {
-          return '';
-        } else {
-          return a;
+  function maskInput() {
+    var input = this;
+    var mask = input.dataset.mask;
+    var value = input.value;
+    var literalPattern = /[0\*]/;
+    var numberPattern = /[0-9]/;
+    var newValue = '';
+    try {
+      var maskLength = mask.length;
+      var valueIndex = 0;
+      var maskIndex = 0;
+      for (; maskIndex < maskLength;) {
+        if (maskIndex >= value.length) {
+          break;
         }
-      });
-
-      if (event.type === 'blur') {
-        if (input.value.length === 2) {
-          input.value = '';
+        if (mask[maskIndex] === '0' && value[valueIndex].match(numberPattern) === null) {
+          break;
         }
-      } else {
-        setCursorPosition(input.value.length, input);
+        while (mask[maskIndex].match(literalPattern) === null) {
+          if (value[valueIndex] === mask[maskIndex]) {
+            break;
+          }
+          newValue += mask[maskIndex++];
+        }
+        newValue += value[valueIndex++];
+        maskIndex++;
       }
+      input.value = newValue;
+    } catch (e) {
+      console.log(e);
     }
-  });
+  }
 
   // popup
   var KEYCODE = {
