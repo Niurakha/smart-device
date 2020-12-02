@@ -225,8 +225,8 @@
         transform: rotate(-45deg);
 
         @media (max-width: $tablet-width) {
-          top: 3px;
-          left: -31px;
+          top: 4px;
+          left: -29px;
 
           height: 6px;
         }
@@ -279,7 +279,7 @@
   @media (max-width: $tablet-width) {
     &::before {
       top: 0;
-      left: -36px;
+      left: -34px;
 
       width: 17px;
       height: 16px;
