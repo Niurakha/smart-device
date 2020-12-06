@@ -1,41 +1,68 @@
 .intro {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 86%;
-  padding-top: 140px;
   overflow: hidden;
 
-  @media (max-width: $tablet-width) {
-    padding-top: 33px;
-  }
+  background-color: $color-dark-gray;
+  background-image: url("../img/bg-intro-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-  @media (max-width: $mobile-width) {
-    position: relative;
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-intro-desktop@2x.png");
 
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 226px;
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/bg-intro-tablet@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-intro-tablet@2x.png");
+      }
+    }
+
+    @media (max-width: $mobile-width) {
+      background-image: url("../img/bg-intro-mobile@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-intro-mobile@2x.png");
+      }
+    }
   }
 }
 
 .intro__wrapper {
   position: relative;
 
-  max-width: 789px;
-  height: inherit;
-  padding: 57px 0 0 71px;
+  display: flex;
+  max-width: 1565px;
+  margin: 0 auto;
+  padding: 258px 0 105px;
 
   @media (max-width: $tablet-width) {
-    max-width: 510px;
-    padding: 75px 0 0 88px;
+    justify-content: space-between;
+    padding: 113px 0 163px 88px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 286px 12px 70px 15px;
+  }
+}
+
+.intro__text {
+  padding-top: 57px;
+  padding-left: 71px;
+
+  @media (max-width: $tablet-width) {
+    min-width: 422px;
+    padding-top: 75px;
+    padding-left: 0;
   }
 
   @media (max-width: $mobile-width) {
     z-index: 1;
 
     order: 1;
-    padding: 0 0 0 15px;
+    min-width: 100%;
+    max-width: 320px;
+    padding-top: 0;
   }
 }
 
@@ -171,7 +198,7 @@
 
 .intro__scroll {
   position: absolute;
-  bottom: 36px;
+  bottom: 127px;
   left: 37px;
 
   display: inline-block;
@@ -198,6 +225,7 @@
   position: relative;
   z-index: 0;
 
+  flex-shrink: 3;
   min-width: 705px;
 
   &::before {
@@ -215,8 +243,8 @@
   }
 
   @media (max-width: $tablet-width) {
+    flex-shrink: 1;
     min-width: 260px;
-    flex-shrink: 0;
 
     &::before {
       top: -153px;
@@ -229,9 +257,10 @@
 
   @media (max-width: $mobile-width) {
     position: absolute;
-    top: 32px;
+    top: 92px;
     right: 0;
-    width: 294px;
+
+    max-width: 294px;
 
     &::before {
       top: -137px;

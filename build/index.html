@@ -111,47 +111,49 @@
         </div>
       </a>
       <ul class="header-top__contacts contacts">
-        <li class="contacts__email">
+        <li class="contacts__email header-top__contacts-item">
           <a class="contacts__email-link" href="mailto:info@sd.ru" aria-label="Наша электронная почта">
             <span class="contacts__email-text">info@sd.ru</span>
           </a>
         </li>
-        <li class="contacts__tel">
+        <li class="contacts__tel header-top__contacts-item">
           <a class="contacts__tel-link" href="tel:+74950005252" aria-label="Наш телефон">
             <span class="contacts__tel-text">+7 (495) 000 52 52</span>
           </a>
         </li>
-        <li class="contacts__button">
-          <a class="contacts__btn btn" href="/callback-popup">Заказать звонок</a>
+        <li class="contacts__button header-top__contacts-item">
+          <a class="contacts__btn btn" href="#">Заказать звонок</a>
         </li>
       </ul>
     </div>
-    <div class="header__intro intro">
-      <div class="intro__wrapper">
-        <h1>Печатные платы</h1>
-        <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="intro__link btn" href="#form">
-          <span class="intro__btn-text intro__btn-text--mobile">Бесплатная консультация</span>
-          <span class="intro__btn-text intro__btn-text--desktop">Получить бесплатную консультацию</span>
-        </a>
-        <a class="intro__scroll" href="#advantages">Скролл вниз</a>
-      </div>
-      <div class="intro__image">
-        <picture>
-          <!-- 1х: 294px; 2x: 588px -->
-          <source type="image/webp" media="(max-width: 767px)" srcset="img/printed-circuit-board-mobile@1x.webp 1x, img/printed-circuit-board-mobile@2x.webp 2x">
-          <!-- 1х: 260px; 2x: 520px -->
-          <source type="image/webp" media="(max-width: 1023px)" srcset="img/printed-circuit-board-tablet@1x.webp 1x, img/printed-circuit-board-tablet@2x.webp 2x">
-          <!-- 1х: 705px; 2x: 1410px -->
-          <source type="image/webp" srcset="img/printed-circuit-board-desktop@1x.webp 1x, img/printed-circuit-board-desktop@2x.webp 2x">
-
-          <!-- 1х: 705px; 2x: 1410px -->
-          <img src="img/printed-circuit-board-desktop@1x.png" srcset="img/printed-circuit-board-desktop@2x.png 2x" width="705" height="515" alt="Печатные платы">
-        </picture>
-      </div>
-    </div>
   </header>
   <main class="page-main">
+    <section class="intro">
+      <div class="intro__wrapper">
+        <div class="intro__text">
+          <h1>Печатные платы</h1>
+          <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a class="intro__link btn" href="#form">
+            <span class="intro__btn-text intro__btn-text--mobile">Бесплатная консультация</span>
+            <span class="intro__btn-text intro__btn-text--desktop">Получить бесплатную консультацию</span>
+          </a>
+          <a class="intro__scroll" href="#advantages">Скролл вниз</a>
+        </div>
+        <div class="intro__image">
+          <picture>
+            <!-- 1х: 294px; 2x: 588px -->
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/printed-circuit-board-mobile@1x.webp 1x, img/printed-circuit-board-mobile@2x.webp 2x">
+            <!-- 1х: 260px; 2x: 520px -->
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/printed-circuit-board-tablet@1x.webp 1x, img/printed-circuit-board-tablet@2x.webp 2x">
+            <!-- 1х: 705px; 2x: 1410px -->
+            <source type="image/webp" srcset="img/printed-circuit-board-desktop@1x.webp 1x, img/printed-circuit-board-desktop@2x.webp 2x">
+
+            <!-- 1х: 705px; 2x: 1410px -->
+            <img src="img/printed-circuit-board-desktop@1x.png" srcset="img/printed-circuit-board-desktop@2x.png 2x" width="705" height="515" alt="Печатные платы">
+          </picture>
+        </div>
+      </div>
+    </section>
     <section class="advantages" id="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <div class="container">
@@ -207,7 +209,7 @@
               Производители светотехники России.
             </span>
           </p>
-          <a class="btn" href="/more" aria-label="Подробнее о нашей компании">Подробнее</a>
+          <a class="btn" href="#" aria-label="Подробнее о нашей компании">Подробнее</a>
         </div>
       </div>
     </section>
@@ -217,7 +219,7 @@
           <h2>Service Device предлагает следующие товары и&nbsp;услуги</h2>
           <ul>
             <li>
-              <a href="/production">
+              <a href="#">
                 <h3>Производство печатных&nbsp;плат</h3>
                 <picture>
                   <!-- 1х: 290px; 2x: 580px -->
@@ -234,7 +236,7 @@
               </a>
             </li>
             <li>
-              <a href="/mounting">
+              <a href="#">
                 <h3>Монтаж печатных плат</h3>
                 <picture>
                   <!-- 1х: 290px; 2x: 580px -->
@@ -250,7 +252,7 @@
               </a>
             </li>
             <li>
-              <a href="/components">
+              <a href="#">
                 <h3>Комплектующие для&nbsp;светотехники</h3>
                 <picture>
                   <!-- 1х: 290px; 2x: 580px -->
@@ -278,27 +280,27 @@
           <ul>
             <li class="form__field-name">
               <label for="name" aria-label="Имя">
-                <input type="text" name="name" id="name" value="" placeholder="Имя" required="" title="Введите своё имя" tabindex="1">
+                <input type="text" name="name" id="name" value="" placeholder="Имя" required="" title="Введите своё имя">
               </label>
             </li>
             <li class="form__field-phone">
               <label for="tel" aria-label="Номер телефона">
-                <input type="tel" name="phone" id="tel" value="" placeholder="Телефон" required="" minlength="16" title="Введите номер телефона" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" data-mask="+7 (000) 000-00-00" tabindex="1">
+                <input type="tel" name="phone" id="tel" value="" placeholder="Телефон" required="" minlength="16" title="Введите номер телефона" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" data-mask="+7 (000) 000-00-00">
               </label>
             </li>
             <li class="form__field-textarea">
               <label for="letter" aria-label="Текст письма">
-                <textarea name="letter" id="letter" placeholder="Ваш вопрос" title="Задайте нам вопрос" required="" tabindex="1"></textarea>
+                <textarea name="letter" id="letter" placeholder="Ваш вопрос" title="Задайте нам вопрос" required=""></textarea>
               </label>
             </li>
             <li class="form__field-checkbox">
-              <input class="visually-hidden" type="checkbox" name="checkbox" id="form__checkbox" required="" checked="" tabindex="1">
+              <input class="visually-hidden" type="checkbox" name="checkbox" id="form__checkbox" required="" checked="">
               <label for="form__checkbox" aria-label="Согласие на обработку персональных данных">
                 Я согласен на обработку персональных данных
               </label>
             </li>
             <li class="form__field-button">
-              <button class="form__btn btn" type="submit" tabindex="2">Задать вопрос</button>
+              <button class="form__btn btn" type="submit">Задать вопрос</button>
             </li>
           </ul>
         </form>
@@ -320,7 +322,7 @@
         <span class="social-block__item">1999-2018 SD Service Devices</span>
         <ul class="social-block__social-list social-list">
           <li>
-            <a href="/fb" aria-label="Мы на Facebook">
+            <a href="#" aria-label="Мы на Facebook">
               <svg width="27" height="27">
                 <use xlink:href="#icon-facebook"></use>
               </svg>
@@ -334,7 +336,7 @@
             </a>
           </li>
           <li>
-            <a href="/vk" aria-label="Мы в Вконтакте">
+            <a href="#" aria-label="Мы в Вконтакте">
               <svg width="27" height="26">
                 <use xlink:href="#icon-vkontakte"></use>
               </svg>
@@ -344,30 +346,22 @@
       </div>
       <div class="footer__info-menu info-menu">
         <div class="info-menu__sitemap accordion">
-          <div class="info-menu__heading-block accordion__heading-block">
-            <h3 class="info-menu__title">Разделы сайта</h3>
-            <button class="info-menu__toggle accordion__toggle" type="button" aria-label="Показать/Спрятать
-          разделы сайта"></button>
-          </div>
+          <h3 class="info-menu__title accordion__title" tabindex="0">Разделы сайта</h3>
           <ul class="info-menu__nav accordion__block">
-            <li> <a href="#about">О компании</a> </li>
-            <li> <a href="#product">Продукты</a> </li>
-            <li> <a href="/production">Производство печатных плат </a> </li>
-            <li> <a href="/mounting">Монтаж печатных плат</a> </li>
-            <li> <a href="/components">Комплектующие</a> </li>
-            <li> <a href="/delivery">Доставка</a> </li>
-            <li> <a href="/contacts">Контакты</a> </li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Продукты</a></li>
+            <li><a href="#">Производство печатных плат</a></li>
+            <li><a href="#">Монтаж печатных плат</a></li>
+            <li><a href="#">Комплектующие</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
           </ul>
         </div>
         <div class="info-menu__contacts accordion">
-          <div class="info-menu__heading-block accordion__heading-block">
-            <h3 class="info-menu__title">Наш офис</h3>
-            <button class="info-menu__toggle accordion__toggle" type="button" aria-label="Показать/Спрятать
-          контактную информацию"></button>
-          </div>
+          <h3 class="info-menu__title accordion__title" tabindex="0">Наш офис</h3>
           <ul class="info-menu__nav accordion__block">
             <li>
-              <a href="https://yandex.ru/maps/-/CCUAvTRopD">г. Мытищи, Олимпийский проспект,&nbsp;д.10</a>
+              <a href="#">г. Мытищи, Олимпийский проспект,&nbsp;д.10</a>
             </li>
             <li>
               <a href="tel:+74955894050">+7 (495) 589-40-50</a>
@@ -391,10 +385,10 @@
             <span>1999-2018 SD Service Devices</span>
           </li>
           <li class="copyright__item copyright__item--confidentiality">
-            <a href="/confidentiality">Условия конфиденциальности</a>
+            <a href="#">Условия конфиденциальности</a>
           </li>
           <li class="copyright__item copyright__item--developed">
-            <a href="/developed">Developed by wow studio</a>
+            <a href="#">Developed by wow studio</a>
           </li>
         </ul>
       </div>
@@ -403,8 +397,8 @@
 
   <section class="modal">
     <div class="modal__wrapper">
-      <h2 class="visually-hidden">Форма для вопросов клиента</h2>
-      <button class="modal__close-button" type="button" aria-label="Закрыть форму" tabindex="1"></button>
+      <h2 class="visually-hidden">Форма для заказа звонка</h2>
+      <button class="modal__close-button" type="button" aria-label="Закрыть форму" tabindex="3"></button>
       <form class="modal__form form" action="#" method="POST">
         <h3>Закажите звонок</h3>
         <p>Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>

@@ -7,36 +7,35 @@
   // аккордеон
   var accordionItems = document.querySelectorAll('.accordion');
 
-  var hideBlock = function (accordionHeadingBlock) {
-    accordionHeadingBlock.classList.add('accordion__heading-block--inactive');
+  var hideBlock = function (accordionHeadline) {
+    accordionHeadline.classList.add('accordion__title--inactive');
   };
 
-  var showBlock = function (accordionHeadingBlock) {
-    accordionHeadingBlock.classList.remove('accordion__heading-block--inactive');
+  var showBlock = function (accordionHeadline) {
+    accordionHeadline.classList.remove('accordion__title--inactive');
   };
 
   var toggleAccordion = function (evt) {
     Array.prototype.forEach.call(accordionItems, function (accordionBlock) {
-      var accordionHeadingBlock = accordionBlock.closest('.accordion').querySelector('.accordion__heading-block');
-      var button = accordionBlock.closest('.accordion').querySelector('.accordion__toggle');
-      if (button === evt.target && !accordionHeadingBlock.classList.contains('accordion__heading-block--inactive') || button !== evt.target) {
-        hideBlock(accordionHeadingBlock);
-      } else if (button === evt.target) {
-        showBlock(accordionHeadingBlock);
+      var accordionHeadline = accordionBlock.closest('.accordion').querySelector('.accordion__title');
+      if (accordionHeadline === evt.target && !accordionHeadline.classList.contains('accordion__title--inactive') || accordionHeadline !== evt.target) {
+        hideBlock(accordionHeadline);
+      } else if (accordionHeadline === evt.target) {
+        showBlock(accordionHeadline);
       }
     });
   };
 
   Array.prototype.forEach.call(accordionItems, function (accordion) {
-    var accordionToggleButton = accordion.querySelector('.accordion__toggle');
-    var accordionTitle = accordion.querySelector('.accordion__heading-block');
+    var accordionTitle = accordion.querySelector('.accordion__title');
     hideBlock(accordionTitle);
-    accordionToggleButton.addEventListener('click', toggleAccordion);
+    accordionTitle.addEventListener('click', toggleAccordion);
+    accordionTitle.addEventListener('keypress', toggleAccordion);
   });
 
   // скролл по якорной ссылке
 
-  var anchors = document.querySelectorAll('a[href*=\'#\']');
+  var anchors = document.querySelectorAll('.intro__text a[href^=\'#\']');
 
   Array.prototype.forEach.call(anchors, function (anchor) {
     anchor.addEventListener('click', function (evt) {
@@ -154,7 +153,7 @@
   });
 
   window.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === KEYCODE.esc) {
+    if (evt.code === KEYCODE.esc) {
       evt.preventDefault();
       if (popup.classList.contains('modal--show')) {
         closePopup();

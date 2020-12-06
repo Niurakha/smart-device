@@ -17,3 +17,11 @@
     display: none;
   }
 }
+
+.header-top__contacts-item {
+  margin-left: 41px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+  }
+}

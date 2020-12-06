@@ -1,6 +1,7 @@
 .goods-services {
   min-height: 938px;
   padding-top: 88px;
+  padding-bottom: 96px;
 
   background-color: $color-dark-gray;
 
@@ -44,6 +45,7 @@
 
 .goods-services ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   margin: 0;
   padding: 0;
@@ -63,12 +65,13 @@
 .goods-services li {
   position: relative;
 
-  width: 370px * 100% / 1170px;
+  width: 370px * 100% / 1172px;
+  margin-bottom: 30px;
 
   transition: all 0.3s ease;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  &:not(:nth-child(3n+3)) {
+    margin-right: 2.5%;
   }
 
   &:hover,
@@ -80,7 +83,7 @@
     width: 100%;
     margin-bottom: 46px;
 
-    &:not(:last-child) {
+    &:not(:nth-child(3n+3)) {
       margin-right: 0;
     }
   }

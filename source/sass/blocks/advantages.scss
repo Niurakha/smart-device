@@ -17,6 +17,7 @@
   max-width: 1170px;
   margin: 0 auto;
   padding: 0;
+  width: 100%;
 
   list-style: none;
 }
@@ -32,7 +33,6 @@
   background-color: $color-primary-light;
   border: 1px solid $color-border;
   border-left: 3px solid $color-secondary-light;
-  cursor: pointer;
 
   transition: all 0.3s ease;
 

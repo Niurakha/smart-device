@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  min-width: 650px;
+  max-width: 701px;
   margin: 0;
   padding: 0;
 
@@ -20,8 +20,6 @@
 }
 
 .contacts__email {
-  margin-right: 87px;
-
   @media (max-width: $tablet-width) {
     width: 26px;
     height: 19px;
@@ -34,12 +32,12 @@
 }
 
 .contacts__tel {
-  margin-right: 40px;
+  margin-left: 86px;
 
   @media (max-width: $tablet-width) {
     width: 26px;
     height: 24px;
-    margin-right: 0;
+    margin-left: 0;
   }
 }
 
