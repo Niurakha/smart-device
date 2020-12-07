@@ -19,6 +19,10 @@
 
   @include font(15px, 400, 16px);
 
+  &:focus {
+    outline: none;
+  }
+
   @media (max-width: $mobile-width) {
     position: relative;
 
@@ -26,6 +30,10 @@
     margin: 0;
     margin-bottom: 0;
     padding: 28px 13px 23px 15px;
+
+    &:focus {
+      outline: default;
+    }
   }
 }
 
@@ -53,6 +61,13 @@
 .info-menu__nav li {
   min-width: 235px;
   margin-right: 15px;
+}
+
+.info-menu__nav address {
+  font-style: normal;
+  color: $color-dark-gray-50;
+
+  @include font(15px, 400, 25px);
 }
 
 .info-menu a {
